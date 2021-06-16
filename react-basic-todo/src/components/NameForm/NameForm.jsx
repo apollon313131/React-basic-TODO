@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './NameForm.scss'
 
 // //TODO Управляемая компонента
 export class NameForm extends React.Component {
@@ -44,17 +45,40 @@ export class NameForm extends React.Component {
     }
 
     render() {
+        // let styleInput = 'base';
+        // if (this.props.value === 'AAA') {
+        //     styleInput += ' class3'
+        // }
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form
+                onSubmit={this.handleSubmit}
+                className={styles.wrapper}
+            >
                 <br />
                 <label>
                     {/* Name: */}
                     {/* <input type="text" name='name' onChange={this.handleChange} value={this.state.value} /> */}
-                    <input type="text" name='firstName' onChange={this.handleInputChange} value={this.state.firstName} />
+                    <input
+                        // style={{
+                        //     background: '#ccc',
+                        //     transition: 'all'
+                        // }}
+                        className={styles.input}
+                        type="text"
+                        name='firstName'
+                        onChange={this.handleInputChange}
+                        value={this.state.firstName} />
                     <br /><br />
-                    <input type="text" name='lastName' onChange={this.handleInputChange} value={this.state.lastName} />
+                    <input
+                        className={styles.input}
+                        type="text"
+                        name='lastName'
+                        onChange={this.handleInputChange} value={this.state.lastName} />
                     <br /><br />
-                    <textarea onChange={this.handleChange} value={this.state.value}></textarea>
+                    <textarea
+                        className={styles.textarea}
+                        onChange={this.handleChange}
+                        value={this.state.value}></textarea>
                     {/* <textarea value={this.state.value}></textarea> */}
                     <div>
                         <label>

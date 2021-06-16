@@ -1,12 +1,15 @@
 import './App.css';
 import React from 'react'
-// import { ClickCounter } from './components/ClickCounter';
+import { NameForm } from './components/NameForm/NameForm'
 import { List } from './components/List';
+import { SupportForm } from './components/SupportForm/SupportForm'
 // import { Clock } from './components/Clock';
-import { NameForm } from './components/NameForm'
+// import { ClickCounter } from './components/ClickCounter';
 // const numbers = [1, 2, 3, 4, 5] // TODO Работа со списка через компонент LIST
 // const numbers = [1, 2, 3, 4, 5]  // TODO Работа со списка №!
 // const elements = numbers.map(item => <li>{item}</li>) // TODO Работа со списка №!
+// document.documentElement.style.setProperty('--background', '#ccc')
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -18,13 +21,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
-        <NameForm />
-        {/* <Clock /> */}
-        {/* <ul> {elements} </ul> // TODO Работа со списка №! */}
-        {/* < ClickCounter /> // TODO Работа со списка через компонент LIST */}
-        {/* < List items={this.state.numbers} /> */}
-        {/* <List items={['1', '2']} /> */}
-        <List />
+        <header className='App-header'>
+          {/* <NameForm /> */}
+          {/* <Clock /> */}
+          {/* <ul> {elements} </ul> // TODO Работа со списка №! */}
+          {/* < ClickCounter /> // TODO Работа со списка через компонент LIST */}
+          {/* < List items={this.state.numbers} /> */}
+          {/* <List items={['1', '2']} /> */}
+          {/* <List /> */}
+          <SupportForm />
+        </header>
       </div>
     );
   }
