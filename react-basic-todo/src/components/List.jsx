@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 const ListItem = props => {
@@ -16,4 +17,11 @@ export const List = ({ items }) => {
     )
 }
 
+List.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.number)
+}
+
+List.defaultProps = {
+    items: []
+}
 

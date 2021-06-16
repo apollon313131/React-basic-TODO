@@ -1,15 +1,13 @@
 import './App.css';
 import React from 'react'
-import { ClickCounter } from './components/ClickCounter';
+// import { ClickCounter } from './components/ClickCounter';
 import { List } from './components/List';
-import { Clock } from './components/Clock';
-
+// import { Clock } from './components/Clock';
+import { NameForm } from './components/NameForm'
 // const numbers = [1, 2, 3, 4, 5] // TODO Работа со списка через компонент LIST
 // const numbers = [1, 2, 3, 4, 5]  // TODO Работа со списка №!
 // const elements = numbers.map(item => <li>{item}</li>) // TODO Работа со списка №!
-
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -20,12 +18,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
-        <Clock />
+        <NameForm />
+        {/* <Clock /> */}
         {/* <ul> {elements} </ul> // TODO Работа со списка №! */}
-        < ClickCounter /> {/* // TODO Работа со списка через компонент LIST*/}
-        < List items={this.state.numbers} />
-        <List items={this.state.numbers} />
-
+        {/* < ClickCounter /> // TODO Работа со списка через компонент LIST */}
+        {/* < List items={this.state.numbers} /> */}
+        {/* <List items={['1', '2']} /> */}
+        <List />
       </div>
     );
   }
