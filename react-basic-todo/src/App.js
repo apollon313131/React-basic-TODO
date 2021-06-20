@@ -1,11 +1,15 @@
 import './App.css';
-import React from 'react'
-import { MarkList } from './components/MarksList/MarkList'
-// import { NameForm } from './components/NameForm/NameForm'
+import React from 'react';
+import { renderRoutes } from 'react-router-config'
+import { routes } from './routes'
+// import { MarkList } from './components/MarksList/MarkList';
+// import { Switch, Route } from 'react-router-dom';
+// import { NameForm } from './components/NameForm/NameForm';
 // import { List } from './components/List';
-// import { SupportForm } from './components/SupportForm/SupportForm'
-// import { Icon } from './components/Icon/Icon'
-// import { iconTypes } from './constants/icons'
+// import { SupportForm } from './components/SupportForm/SupportForm';
+// import { Menu } from './components/Menu/Menu';
+// import { Icon } from './components/Icon/Icon';
+// import { iconTypes } from './constants/icons';
 // import { Button } from './components/Button/Button';
 // import { Clock } from './components/Clock';
 // import { ClickCounter } from './components/ClickCounter';
@@ -25,21 +29,27 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
-        <header className='App-header'>
-          <MarkList />
-          {/* <Icon type={iconTypes.cross} color='red' id='22' className='className1' />
+        {renderRoutes(routes)}
+        {/* <Menu /> */}
+        {/* <header className='App-header'> */}
+        {/* <Switch>
+            <Route exact path='/' component={MarkList} />
+            <Route exact path='/name' component={NameForm} />
+            <Route exact path='/support' component={SupportForm} />
+          </Switch> */}
+        {/* <Icon type={iconTypes.cross} color='red' id='22' className='className1' />
           <Icon type={iconTypes.plus} size='16px' id='22' /> */}
-          {/* <Button className='customClass' id='id' iconType={iconTypes.plus}>First</Button>
+        {/* <Button className='customClass' id='id' iconType={iconTypes.plus}>First</Button>
           <Button className='customClass' size='small' color='primary' id='id'>Second</Button> */}
-          {/* <NameForm /> */}
-          {/* <Clock /> */}
-          {/* <ul> {elements} </ul> // TODO Работа со списка №! */}
-          {/* < ClickCounter /> // TODO Работа со списка через компонент LIST */}
-          {/* < List items={this.state.numbers} /> */}
-          {/* <List items={['1', '2']} /> */}
-          {/* <List /> */}
-          {/* <SupportForm /> */}
-        </header>
+        {/* <NameForm /> */}
+        {/* <Clock /> */}
+        {/* <ul> {elements} </ul> // TODO Работа со списка №! */}
+        {/* < ClickCounter /> // TODO Работа со списка через компонент LIST */}
+        {/* < List items={this.state.numbers} /> */}
+        {/* <List items={['1', '2']} /> */}
+        {/* <List /> */}
+        {/* <SupportForm /> */}
+        {/* </header> */}
       </div>
     );
   }
