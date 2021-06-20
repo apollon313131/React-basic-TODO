@@ -13,8 +13,6 @@ export const Control = props => {
         input = <textarea name={name} onChange={onChange} {...rest} />
     }
 
-
-
     return (
         <div className={clsx(styles.control, className)}>
             {input}
